@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en" ng-app="ledCalculator">
+<head>
+   <title>Calculatrice LED</title>
+        
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+	<link rel="stylesheet" type="text/css" href="css/dx.spa.css" />
+    <link rel="stylesheet" type="text/css" href="css/dx.common.css" />
+    <link rel="dx-theme" data-theme="ios.default" href="css/dx.ios.default.css" />
+    <link rel="dx-theme" data-theme="ios7.default" href="css/dx.ios7.default.css" />
+    <link rel="dx-theme" data-theme="android.holo-dark" href="css/dx.android.holo-dark.css"/>
+    <link rel="dx-theme" data-theme="win8.black" href="css/dx.win8.black.css" />
+    <link rel="dx-theme" data-theme="tizen.black" href="css/dx.tizen.black.css" />
+    <link rel="dx-theme" data-theme="generic.light" href="css/dx.light.css" />
+	<link rel="stylesheet" type="text/css" href="css/app.css" />
+</head>
+<body>
+    <div ng-view class="dx-viewport dx-ios-stripes"></div>
+
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="lib/jquery-1.11.1.min.js"></script>
+    <![endif]-->
+    <!--[if gte IE 9]><!-->
+    <script type="text/javascript" src="lib/jquery-2.1.1.min.js"></script>
+    <!--<![endif]-->
+    <script src="lib/globalize.min.js"></script>
+	<script src="lib/angular/angular.min.js"></script>
+	<script src="lib/angular/angular-sanitize.min.js"></script>
+	<script src="lib/angular/angular-route.min.js"></script>
+    <script src="lib/dx.phonejs.js"></script>
+
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+
+    <script>
+        DevExpress.ui.themes.attachCssClasses($(".dx-viewport"));
+    </script>
+</body>
+</html>

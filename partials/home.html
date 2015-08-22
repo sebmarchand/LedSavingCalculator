@@ -1,0 +1,45 @@
+<div dx-toolbar="{ items: [{ location: 'center', text: 'Calculatrice LED' }] }"></div>
+
+<div class="dx-fieldset top-fieldset">
+    <div class="dx-field">
+        <div class="dx-field-label">Nombre d'ampoules:</div>
+        <div id="nombreAmpoule" class="dx-field-value" dx-number-box="{ bindingOptions: { value: 'vm.nombreAmpoules' }, placeholder: '', valueChangeEvent: 'keyup', min: 0 }"></div>
+    </div>
+    <div class="dx-field">
+        <div class="dx-field-label">Puissance originale (W):</div>
+        <div id="puissanceAmpoule" class="dx-field-value" dx-number-box="{ bindingOptions: { value: 'vm.puissanceOri' }, placeholder: '', valueChangeEvent: 'keyup', min: 0 }"></div>
+    </div>
+    <div class="dx-field">
+        <div class="dx-field-label">Puissance LED (W):</div>
+        <div id="puissanceLED" class="dx-field-value" dx-number-box="{ bindingOptions: { value: 'vm.puissanceLed' }, placeholder: '', valueChangeEvent: 'keyup', min: 0 }"></div>
+    </div>
+    <div class="dx-field">
+        <div class="dx-field-label">Prix kW ($):</div>
+        <div id="puissanceLED" class="dx-field-value" dx-number-box="{ bindingOptions: { value: 'vm.prixKw' }, placeholder: '', min: 0 }" data-bind="dxNumberBox: floatSettings"></div>
+    </div>
+</div>
+
+<div class="dx-fieldset">
+    <div class="dx-field slider-container">
+        <div class="slider-title">Utilisation</div>
+        <div class="slider-body">
+            <div dx-slider="{ min: 1, max: 24, step: 1, activeStateEnabled: true, bindingOptions: { value: 'vm.usage' } }"></div>
+        </div>
+        <div class="slider-value">{{vm.usage}} h/j</div>
+    </div>
+</div>
+
+<div id="results" class="dx-fieldset">
+    <div class="dx-field">
+        <span class="dx-field-label">Coût actuel</span>
+        <span class="dx-field-value" style="font-weight: bold">{{vm.coutActuel() | currency}}</span>
+    </div>
+    <div class="dx-field">
+        <span class="dx-field-label">Coût LED</span>
+        <span class="dx-field-value" style="font-weight: bold">{{vm.coutLed() | currency}}</span>
+    </div>
+    <div class="dx-field">
+        <span class="dx-field-label">Économies</span>
+        <span class="dx-field-value">{{vm.economies() | currency}}</span>
+    </div>
+</div>
