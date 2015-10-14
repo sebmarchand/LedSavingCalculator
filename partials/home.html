@@ -1,5 +1,5 @@
-<div dx-toolbar="{ items: [{ location: 'center', text: 'Calculatrice LED' }] }"></div>
-
+<div dx-toolbar="{ items: [{ location: 'center', text: 'Calculatrice LED' }] }">
+</div>
 <div class="dx-fieldset top-fieldset">
     <div class="dx-field">
         <div class="dx-field-label">Nombre d'ampoules:</div>
@@ -17,9 +17,6 @@
         <div class="dx-field-label">Prix kW ($):</div>
         <div id="puissanceLED" class="dx-field-value" dx-number-box="{ bindingOptions: { value: 'vm.prixKw' }, placeholder: '', min: 0 }" data-bind="dxNumberBox: floatSettings"></div>
     </div>
-</div>
-
-<div class="dx-fieldset">
     <div class="dx-field slider-container">
         <div class="slider-title">Utilisation</div>
         <div class="slider-body">
@@ -27,59 +24,52 @@
         </div>
         <div class="slider-value">{{vm.usage}} h/j</div>
     </div>
-</div>
-
-<div class="dx-fieldset top-fieldset">
     <div class="dx-field">
         <div class="dx-field-label">Durée vie ampoule (h):</div>
-        <div id="puissanceAmpoule" class="dx-field-value" dx-number-box="{
-            bindingOptions: { value: 'vm.dureeVieAmpoule' }, placeholder: '', valueChangeEvent: 'keyup', min: 0 }"></div>
+        <div id="puissanceAmpoule" class="dx-field-value" dx-number-box="{            bindingOptions: { value: 'vm.dureeVieAmpoule' }, placeholder: '', valueChangeEvent: 'keyup', min: 0 }"></div>
     </div>
     <div class="dx-field">
         <div class="dx-field-label">Durée vie ampoule LED (h):</div>
-        <div id="puissanceAmpoule" class="dx-field-value" dx-number-box="{
-            bindingOptions: { value: 'vm.dureeVieLED' }, placeholder: '', valueChangeEvent: 'keyup', min: 0 }"></div>
+        <div id="puissanceAmpoule" class="dx-field-value" dx-number-box="{            bindingOptions: { value: 'vm.dureeVieLED' }, placeholder: '', valueChangeEvent: 'keyup', min: 0 }"></div>
     </div>
     <div class="dx-field">
         <div class="dx-field-label">Cout ampoule ($):</div>
-        <div id="puissanceAmpoule" class="dx-field-value" dx-number-box="{
-            bindingOptions: { value: 'vm.coutAmpoule' }, placeholder: '', valueChangeEvent: 'keyup', min: 0 }"></div>
+        <div id="puissanceAmpoule" class="dx-field-value" dx-number-box="{            bindingOptions: { value: 'vm.coutAmpoule' }, placeholder: '', valueChangeEvent: 'keyup', min: 0 }"></div>
     </div>
     <div class="dx-field">
         <div class="dx-field-label">Cout ampoule LED ($):</div>
-        <div id="puissanceAmpoule" class="dx-field-value" dx-number-box="{
-            bindingOptions: { value: 'vm.coutAmpouleLED' }, placeholder: '', valueChangeEvent: 'keyup', min: 0 }"></div>
+        <div id="puissanceAmpoule" class="dx-field-value" dx-number-box="{            bindingOptions: { value: 'vm.coutAmpouleLED' }, placeholder: '', valueChangeEvent: 'keyup', min: 0 }"></div>
     </div>
     <div class="dx-field">
         <div class="dx-field-label">Cout remplacement fixtures ($):</div>
-        <div id="puissanceAmpoule" class="dx-field-value" dx-number-box="{
-            bindingOptions: { value: 'vm.coutInstallationFixtures' }, placeholder: '', valueChangeEvent: 'keyup', min: 0 }"></div>
-    </div>
-</div>
-
-<div id="results" class="dx-fieldset">
-    <div class="dx-field">
-        <span class="dx-field-label">Coût actuel en électricité (/an)</span>
-        <span class="dx-field-value" style="font-weight: bold">{{vm.coutActuel() | currency}}</span>
+        <div id="puissanceAmpoule" class="dx-field-value" dx-number-box="{            bindingOptions: { value: 'vm.coutInstallationFixtures' }, placeholder: '', valueChangeEvent: 'keyup', min: 0 }"></div>
     </div>
     <div class="dx-field">
-        <span class="dx-field-label">Coût LED en électricité (/an)</span>
-        <span class="dx-field-value" style="font-weight: bold">{{vm.coutLed() | currency}}</span>
+        <div class="dx-field-label">Coût actuel en électricité (/an)</div>
+        <div class="dx-field-value" style="font-weight: bold">{{vm.coutActuel() | currency}}</div>
     </div>
     <div class="dx-field">
-        <span class="dx-field-label">Économies</span>
-        <span class="dx-field-value">{{vm.economies() | currency}}</span>
+        <div class="dx-field-label">Coût LED en électricité (/an)</div>
+        <div class="dx-field-value" style="font-weight: bold">{{vm.coutLed() | currency}}</div>
     </div>
     <div class="dx-field">
-        <span class="dx-field-label">Coût actuel total (/an)</span>
-        <span class="dx-field-value" style="font-weight: bold">{{vm.coutTotal() | currency}}</span>
+        <div class="dx-field-label">Économies</div>
+        <div class="dx-field-value" style="font-weight: bold">{{vm.economies() | currency}}</div>
     </div>
     <div class="dx-field">
-        <span class="dx-field-label">Coût total LED (/an)</span>
-        <span class="dx-field-value" style="font-weight: bold">{{vm.coutTotalLed() | currency}}</span>
+        <div class="dx-field-label">Coût actuel total (/an)</div>
+        <div class="dx-field-value" style="font-weight: bold">{{vm.coutTotal() | currency}}</div>
     </div>
     <div class="dx-field">
-        <span class="dx-field-label">Économies totales</span>
-        <span class="dx-field-value">{{vm.economiesTotales() | currency}}</span>
+        <div class="dx-field-label">Coût total LED (/an)</div>
+        <div class="dx-field-value" style="font-weight: bold">{{vm.coutTotalLed() | currency}}</div>
+    </div>
+    <div class="dx-field">
+        <div class="dx-field-label">Économies totales</div>
+        <div class="dx-field-value" style="font-weight: bold">{{vm.economiesTotales() | currency}}</div>
+    </div>
+    <div class="dx-field">
+        <div class="dx-field-label">ROI</div>
+        <div class="dx-field-value" style="font-weight: bold">{{vm.roi() | currency}}</div>
     </div>
 </div>
